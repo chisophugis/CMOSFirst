@@ -1,0 +1,14 @@
+*** SPICE deck for cell inv_20_10{sch} from library tutorial_3
+*** Created on Sun Feb 15, 2015 13:51:11
+*** Last revised on Sun Feb 15, 2015 15:40:57
+*** Written on Sun Feb 15, 2015 15:40:59 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: inv_20_10{sch}
+Mnmos@0 out in gnd gnd myNMOS L=0.6U W=3U
+Mpmos@0 out in vdd vdd myPMOS L=0.6U W=3U
+.END

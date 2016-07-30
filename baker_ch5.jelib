@@ -1,0 +1,67 @@
+# header information:
+Hbaker_ch5|9.05
+
+# Views:
+Vdocumentation|doc
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell 4_5_divider;1{lay}
+C4_5_divider;1{lay}||mocmos|1424762183566|1424762400193||DRC_last_good_drc_area_date()G1424762405392|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1424762405392
+IR_5k_unit_cell;1{lay}|R_5k_uni@0||-3.5|6|||D5G4;
+IR_5k_unit_cell;1{lay}|R_5k_uni@1||-3.5|24|||D5G4;
+IR_5k_unit_cell;1{lay}|R_5k_uni@2||-3.5|42|||D5G4;
+IR_5k_unit_cell;1{lay}|R_5k_uni@3||-3.5|60|||D5G4;
+IR_5k_unit_cell;1{lay}|R_5k_uni@4||-3.5|78|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+AMetal-1|net@0|||S900|R_5k_uni@4|t2|60.5|78|R_5k_uni@3|t2|60.5|60
+AMetal-1|net@1|||S900|R_5k_uni@3|t1|-68.5|60|R_5k_uni@2|t1|-68.5|42
+AMetal-1|net@2|||S900|R_5k_uni@2|t2|60.5|42|R_5k_uni@1|t2|60.5|24
+AMetal-1|net@3|||S900|R_5k_uni@1|t1|-68.5|24|R_5k_uni@0|t1|-68.5|6
+Et1||D5G10;|R_5k_uni@4|t1|U
+Et2||D5G10;|R_5k_uni@0|t2|U
+X
+
+# Cell 4_5_divider;1{sch}
+C4_5_divider;1{sch}||schematic|1424762195523|1424762331777|
+IR_5k_unit_cell;1{sch}|R_5k_uni@2||-0.75|-4.5|||D5G4;
+IR_5k_unit_cell;1{sch}|R_5k_uni@3||-0.75|-6.5|||D5G4;
+IR_5k_unit_cell;1{sch}|R_5k_uni@4||-0.75|-8.5|||D5G4;
+IR_5k_unit_cell;1{sch}|R_5k_uni@5||-0.75|-10.5|||D5G4;
+IR_5k_unit_cell;1{sch}|R_5k_uni@6||-0.75|-12.5|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Awire|net@0|||900|R_5k_uni@2|t2|2.25|-4.5|R_5k_uni@3|t2|2.25|-6.5
+Awire|net@1|||900|R_5k_uni@3|t1|-3.75|-6.5|R_5k_uni@4|t1|-3.75|-8.5
+Awire|net@2|||900|R_5k_uni@4|t2|2.25|-8.5|R_5k_uni@5|t2|2.25|-10.5
+Awire|net@3|||900|R_5k_uni@5|t1|-3.75|-10.5|R_5k_uni@6|t1|-3.75|-12.5
+Et1||D5G2;|R_5k_uni@2|t1|U
+Et2||D5G2;|R_5k_uni@6|t2|U
+X
+
+# Cell R_5k_unit_cell;1{doc}
+CR_5k_unit_cell;1{doc}||artwork|1424761105603|1424761184753||FACET_message()S[nominal 500 Ohm/square]
+Ngeneric:Facet-Center|art@0||0|0||||AV
+X
+
+# Cell R_5k_unit_cell;1{lay}
+CR_5k_unit_cell;1{lay}||mocmos|1424761084156|1424762126035||DRC_last_good_drc_area_date()G1424762166626|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1424762166626
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NN-Well-Resistor|resnwell@0||0|0|79|||
+Et1||D5G5;|resnwell@0|left|U
+Et2||D5G5;|resnwell@0|right|U
+X
+
+# Cell R_5k_unit_cell;1{sch}
+CR_5k_unit_cell;1{sch}||schematic|1424761097901|1424762158783|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NWire_Pin|pin@1||-3|0||||
+NWire_Pin|pin@2||3|0||||
+NResistor|resnwell@0||0|0||||3|ATTR_length(D5G0.25;X-1.5;)S120|ATTR_width(D5G0.5;X1.5;)S12|SCHEM_resistance(D5G1;)S5k
+Awire|net@3|||0|resnwell@0|a|-2|0|pin@1||-3|0
+Awire|net@4|||1800|resnwell@0|b|2|0|pin@2||3|0
+Et1||D5G1;|pin@1||U
+Et2||D5G1;|pin@2||U
+X

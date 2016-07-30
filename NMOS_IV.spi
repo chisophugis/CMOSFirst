@@ -1,0 +1,20 @@
+*** SPICE deck for cell NMOS_IV{sch} from library tutorial_2
+*** Created on Sat Feb 14, 2015 15:59:29
+*** Last revised on Sat Feb 14, 2015 18:31:22
+*** Written on Sat Feb 14, 2015 19:01:54 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd
+
+*** TOP LEVEL CELL: NMOS_IV{sch}
+Mnmos-4@0 d g s gnd myNMOS L=0.6U W=3U
+
+* Spice Code nodes in cell cell 'NMOS_IV{sch}'
+vg g 0 DC 0
+vd d 0 DC 0
+vs s 0 DC 0
+.dc vd 0 5 1m vg 0 5 1
+.include C5_models.txt
+.END

@@ -1,0 +1,32 @@
+*** SPICE deck for cell ring_oscillator;1{lay} from library tutorial_6
+*** Created on Fri Feb 20, 2015 14:34:47
+*** Last revised on Fri Feb 20, 2015 14:47:42
+*** Written on Mon Feb 23, 2015 23:41:38 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT tutorial_6__inv_20_10 FROM CELL inv_20_10{lay}
+.SUBCKT tutorial_6__inv_20_10 gnd in out vdd
+Mnmos@0 out in gnd gnd myNMOS L=0.6U W=3U AS=14.4P AD=8.1P PS=24.6U PD=12.6U
+Mpmos@0 out in vdd vdd myPMOS L=0.6U W=6U AS=19.8P AD=8.1P PS=30.6U PD=12.6U
+.ENDS tutorial_6__inv_20_10
+
+*** TOP LEVEL CELL: ring_oscillator;1{lay}
+Xinv_20_1@0 gnd osc_out net@20 vdd tutorial_6__inv_20_10
+Xinv_20_1@1 gnd net@20 net@22 vdd tutorial_6__inv_20_10
+Xinv_20_1@2 gnd net@22 net@23 vdd tutorial_6__inv_20_10
+Xinv_20_1@3 gnd net@23 net@24 vdd tutorial_6__inv_20_10
+Xinv_20_1@4 gnd net@24 net@25 vdd tutorial_6__inv_20_10
+Xinv_20_1@5 gnd net@25 net@26 vdd tutorial_6__inv_20_10
+Xinv_20_1@6 gnd net@26 net@27 vdd tutorial_6__inv_20_10
+Xinv_20_1@7 gnd net@27 net@28 vdd tutorial_6__inv_20_10
+Xinv_20_1@8 gnd net@28 net@29 vdd tutorial_6__inv_20_10
+Xinv_20_1@9 gnd net@29 net@21 vdd tutorial_6__inv_20_10
+Xinv_20_1@10 gnd net@21 osc_out vdd tutorial_6__inv_20_10
+
+* Spice Code nodes in cell cell 'ring_oscillator;1{lay}'
+vdd vdd 0 DC 5
+.tran 30n
+.include C5_models.txt
+.END
