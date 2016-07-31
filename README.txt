@@ -8,3 +8,6 @@ by R. Jacob Baker:
 baker_prob_2_3.jelib
 baker_ch3.jelib
 baker_ch5.jelib
+
+
+I did this in Feb 2015 (but forgot to check stuff into git until later).
